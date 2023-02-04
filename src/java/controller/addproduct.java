@@ -77,19 +77,24 @@ public class addproduct extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        ListProductDAO listProductDAO = new ListProductDAO();
+        ArrayList<ListProduct> listproduct = listProductDAO.getListNameOfProduct();
+        request.setAttribute("listproduct", listproduct);
+
         String add_name = request.getParameter("add_name");
         float add_price = Float.parseFloat(request.getParameter("add_price"));
         int add_count = Integer.parseInt(request.getParameter("add_count"));
         int add_lid = Integer.parseInt(request.getParameter("add_lid"));
 
-        if (add_name.isEmpty() || add_price <= 0) {
-            request.setAttribute("msg", "Tên trống hoặc giá nhỏ hơn 0, mời bạn nhập lại!");
+        if (add_name.length() > 100 || add_price <= 0) {
+            request.setAttribute("msg", "Tên quá dài hoặc giá nhỏ hơn 0, mời bạn nhập lại!");
         } else {
             ProductDAO productDAO = new ProductDAO();;
-            productDAO.addProduct(add_name, add_price, add_count ,add_lid);
+            productDAO.addProduct(add_name, add_price, add_count, add_lid);
+            request.setAttribute("listproduct", listproduct);
             request.setAttribute("msg", "Đã thêm sản phẩm thành công");
         }
-   
+
         request.getRequestDispatcher("addproduct.jsp").forward(request, response);
     }
 

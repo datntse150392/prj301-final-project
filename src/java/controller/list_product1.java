@@ -41,7 +41,7 @@ public class list_product1 extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet list_product1</title>");            
+            out.println("<title>Servlet list_product1</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet list_product1 at " + request.getContextPath() + "</h1>");
@@ -62,17 +62,27 @@ public class list_product1 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        // get number_loadmore
+        int number_loadmore;
+        if (request.getParameter("number_loadmore") == null) {
+            number_loadmore = 4;
+            request.setAttribute("number_loadmore", number_loadmore);
+        } else {
+            number_loadmore = Integer.parseInt(request.getParameter("number_loadmore"));
+            number_loadmore = number_loadmore + 3;
+            request.setAttribute("number_loadmore", number_loadmore);
+        }
         ProductDAO productDAO = new ProductDAO();
         ListProductDAO listproductDAO = new ListProductDAO();
         ImgDAO imgDAO = new ImgDAO();
-        ArrayList<Product> list_product = productDAO.getListOfProduct();
+        ArrayList<Product> list_product = productDAO.getListOfProductbyLoadMore(number_loadmore);
         ArrayList<ListProduct> listname_product = listproductDAO.getListNameOfProduct();
         ArrayList<Img> list_img = imgDAO.getListImg();
-        
+
         request.setAttribute("list_product", list_product);
         request.setAttribute("listname_product", listname_product);
         request.setAttribute("list_img", list_img);
-        
+
         request.getRequestDispatcher("list_product1.jsp").forward(request, response);
     }
 

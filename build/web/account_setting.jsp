@@ -15,12 +15,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/account_setting.css">
 </head>
-<body>
-    <!-- Include Header -->
-    <%@include file="header.jsp"%>
+<body  class="hero"style="background-image: url('header_layout/images/images_header/hero_5.jpg'); height: 100%">
+    <%@include file="header1.jsp"%>
     <section class="py-5 my-5">
         <div class="container">
-            <h1 class="mb-5">Thông tin tài khoản</h1>
+            <h1 class="mb-5" style="color: white">Thông tin tài khoản</h1>
             <div class="bg-white shadow rounded-lg d-block d-sm-flex">
                 <div class="profile-tab-nav border-right">
                     <div class="p-4">
@@ -85,11 +84,17 @@
                                         <label>Địa chỉ</label>
                                         <input type="text" class="form-control" value="${user_account.address}">
                                     </div>
-                                </div>                        
+                                </div>  
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input type="text" class="form-control"}">
+                                    </div>
+                                </div>  
                             </div>
                         </c:if>
                         <div>
-                            <button class="btn btn-primary">Update</button>
+                            <button class="btn btn-primary">Cập nhật</button>
                             <button class="btn btn-light">Cancel</button>
                         </div>
                     </div>
@@ -122,6 +127,7 @@
                             <button class="btn btn-light">Cancel</button>
                         </div>
                     </div>
+                    <!--
                     <div class="tab-pane fade" id="security" role="tabpanel" aria-labelledby="security-tab">
                         <h3 class="mb-4">Security Settings</h3>
                         <div class="row">
@@ -209,8 +215,9 @@
                             <button class="btn btn-light">Cancel</button>
                         </div>
                     </div>
+                    -->
                 </div>
-            </div>
+            </div> 
         </div>
     </section>
 
@@ -218,7 +225,5 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <!-- Include rooter -->
-    <%@include file="rooter.jsp"%>
 </body>
 </html>

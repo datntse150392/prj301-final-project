@@ -10,21 +10,21 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Danh sách tất cả sản phẩm</title>
-        
         <!-- Get BootStrap V5 -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+        <title>Danh sách tất cả sản phẩm</title>
     </head>
-    <body >  
-        <div class="hero"style="background-image: url('header_layout/images/images_header/hero_6.jpg'); height: auto">
-            <%@include file="header1.jsp"%>
-            <div style="text-align: -webkit-center">
-                <!-- Thong bao san pham vua them -->
-                <h4 style="color: red; text-align: center">${msg} </h4>
-                <div class="table-responsive">
-                    <h2 style="color: white">Danh sách tất cả sản phẩm</h2>
-                    <table class="table table-striped table-sm" style="width: 80%">
+    <body>
+        <section>
+            <main class="d-flex flex-nowrap">
+                <%@include file="Sidebar.jsp"%>
+                <div style="text-align: -webkit-center; width: 100%" >
+                    <!-- Thong bao san pham vua them -->
+                    <h4 style="color: red; text-align: center">${msg} </h4>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-sm">
                         <thead style="font-size: 16px">
                             <tr>
                                 <c:if test="${admin != null}">
@@ -109,17 +109,20 @@
                             </c:forEach>
                         </tbody>
                     </table>
-                </div>
+                    </div>
+                    
+                    <!-- LoadMore -->
+                    <div style="display: inline-flex; list-style-type:none;">
+                        <li>
+                            <form action="allproduct">
+                                <button type="submit" name="number_loadmore" value="${number_loadmore}">Load more</button>
+                            </form>
+                        </li>
 
-                <div style="display: inline-flex; list-style-type:none;">
-                    <li>
-                        <form action="allproduct">
-                            <button type="submit" name="number_loadmore" value="${number_loadmore}">Load more</button>
-                        </form>
-                    </li>
-
+                    </div>
                 </div>
-            </div>
-        </div>
+                </div>
+            </main>
+        </section>
     </body>
 </html>

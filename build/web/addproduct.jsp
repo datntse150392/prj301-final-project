@@ -13,10 +13,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Thêm sản phẩm</title>
     </head>
-    <body>
-        <%@include file="header.jsp"%>
+    <body  class="hero"style="background-image: url('header_layout/images/images_header/hero_5.jpg'); height: auto">
+        <%@include file="header1.jsp"%>
         <div class="container col-xl-10 col-xxl-8 px-4 py-5" style="width: 100%">
-            <h1 style="text-align: center">Vui lòng nhập thông tin để thêm sản phẩm</h1>
+                           <h3 style="text-align: center; color: white; margin-bottom: -30px;margin-top: -40px;">Nhập thông tin để thêm sản phẩm</h3>
             <div class="row align-items-center g-lg-5 py-5">
                 <div class="col-md-10 mx-auto col-lg-5">
                     <form action="addproduct" method="post" class="p-4 p-md-5 border rounded-3 bg-light">
@@ -44,12 +44,10 @@
                         </div>
 
                         <button class="w-100 btn btn-lg btn-primary" type="submit">Thêm vào danh sách</button>
-                        <p>${msg}</p>
+                        <p style="text-align: center; color: red">${msg}</p>
                     </form>
                 </div>
             </div>
         </div>
-
-        <%@include file="rooter.jsp"%>
     </body>
 </html>

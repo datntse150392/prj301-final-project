@@ -8,13 +8,22 @@
             <file>file://Mac/Home/Documents/NetBeansProjects/BigProject_Katplanet/BigProject_Katplanet/web/header_layout/css/header/style.css</file>
             <file>file://Mac/Home/Documents/NetBeansProjects/BigProject_Katplanet/BigProject_Katplanet/web/Sidebar.jsp</file>
             <file>file://Mac/Home/Documents/NetBeansProjects/BigProject_Katplanet/BigProject_Katplanet/web/allproduct.jsp</file>
+            <file>file://Mac/Home/Documents/NetBeansProjects/BigProject_Katplanet/BigProject_Katplanet/src/java/controller/addproduct.java</file>
             <file>file://Mac/Home/Documents/NetBeansProjects/BigProject_Katplanet/BigProject_Katplanet/web/rooter.jsp</file>
             <file>file://Mac/Home/Documents/NetBeansProjects/BigProject_Katplanet/BigProject_Katplanet/web/allproduct_backup.jsp</file>
+            <file>file://Mac/Home/Documents/NetBeansProjects/BigProject_Katplanet/BigProject_Katplanet/web/list_product2.jsp</file>
             <file>file://Mac/Home/Documents/NetBeansProjects/BigProject_Katplanet/BigProject_Katplanet/web/homepage.jsp</file>
             <file>file://Mac/Home/Documents/NetBeansProjects/BigProject_Katplanet/BigProject_Katplanet/web/login.jsp</file>
             <file>file://Mac/Home/Documents/NetBeansProjects/BigProject_Katplanet/BigProject_Katplanet/web/addproduct.jsp</file>
+            <file>file://Mac/Home/Documents/NetBeansProjects/BigProject_Katplanet/BigProject_Katplanet/web/history.jsp</file>
+            <file>file://Mac/Home/Documents/NetBeansProjects/BigProject_Katplanet/BigProject_Katplanet/src/java/controller/login.java</file>
             <file>file://Mac/Home/Documents/NetBeansProjects/BigProject_Katplanet/BigProject_Katplanet/web/account_setting.jsp</file>
+            <file>file://Mac/Home/Documents/NetBeansProjects/BigProject_Katplanet/BigProject_Katplanet/src/java/controller/list_product2.java</file>
+            <file>file://Mac/Home/Documents/NetBeansProjects/BigProject_Katplanet/BigProject_Katplanet/web/list_product1.jsp</file>
+            <file>file://Mac/Home/Documents/NetBeansProjects/BigProject_Katplanet/BigProject_Katplanet/src/java/controller/cart.java</file>
             <file>file://Mac/Home/Documents/NetBeansProjects/BigProject_Katplanet/BigProject_Katplanet/web/header_layout/css/header/owl.carousel.min.css</file>
+            <file>file://Mac/Home/Documents/NetBeansProjects/BigProject_Katplanet/BigProject_Katplanet/src/java/controller/list_product1.java</file>
+            <file>file://Mac/Home/Documents/NetBeansProjects/BigProject_Katplanet/BigProject_Katplanet/web/cart.jsp</file>
             <file>file://Mac/Home/Documents/NetBeansProjects/BigProject_Katplanet/BigProject_Katplanet/web/header1.jsp</file>
         </group>
     </open-files>

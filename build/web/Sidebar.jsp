@@ -49,10 +49,28 @@
                     <a href="list_product2" class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed">Dụng cụ vệ sinh</a>
 
                 </li>
-                <li class="border-top my-3"></li>
-                <li class="mb-1">
-                    <a href="cart.jsp" class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed">Giỏ hàng</a>               
-                </li>
+                <li class="border-top my-3">
+                <c:if test="${admin != null}">
+                    <li class="mb-1">
+                        <a href="addproduct" class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed">Thêm sản phẩm</a>  
+                    </li>
+                    <li class="mb-1">
+                        <a href="logout" class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed">Đăng xuất</a>    
+                    </li>   
+                </c:if>   
+                <c:if test="${user_account != null }">
+                    <li class="mb-1">
+                        <a href="cart.jsp" class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed">Giỏ hàng</a>  
+                    </li>
+                    <li class="mb-1">
+                        <a href="logout" class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed">Đăng xuất</a>  
+                    </li>
+                </c:if>    
+                <c:if test="${admin == null  && user_account == null}">
+                    <li class="mb-1">
+                        <a href="login" class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed">Đăng nhập</a>  
+                    </li>
+                </c:if>
             </ul>
         </div>
     </body>

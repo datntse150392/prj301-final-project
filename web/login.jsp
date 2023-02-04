@@ -12,7 +12,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Đăng nhập</title>
     </head>
-    <body  class="hero"style="background-image: url('images/images_header/hero_5.jpg'); height: auto">
+    <body  class="hero"style="background-image: url('header_layout/images/images_header/hero_5.jpg'); height: auto">
         <%@include file="header1.jsp"%>
         <div class="container col-xl-10 col-xxl-8 px-4 py-5">
             <div class="row align-items-center g-lg-5 py-5">

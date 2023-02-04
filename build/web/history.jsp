@@ -26,7 +26,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Lịch sử giao dịch</title>
     </head>
-    <body style="background-color: black; height: 100%">
+    <body  class="hero"style="background-image: url('header_layout/images/images_header/hero_5.jpg'); height: auto">
         <%@include file="header1.jsp"%>
         <form action="cart" method="post">
             <section class="h-100">

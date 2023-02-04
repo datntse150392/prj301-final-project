@@ -13,7 +13,9 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import java.util.ArrayList;
+import model.Admin_Account;
 import model.Img;
 import model.ListProduct;
 import model.Product;
@@ -85,7 +87,7 @@ public class allproduct extends HttpServlet {
         request.setAttribute("listname_product", listname_product);
         request.setAttribute("list_img", list_img);
 
-        request.getRequestDispatcher("allproduct_backup.jsp").forward(request, response);
+        request.getRequestDispatcher("allproduct.jsp").forward(request, response);
     }
 
     /**
