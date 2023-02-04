@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th2 04, 2023 lúc 11:54 AM
+-- Thời gian đã tạo: Th2 04, 2023 lúc 04:36 PM
 -- Phiên bản máy phục vụ: 10.4.27-MariaDB
 -- Phiên bản PHP: 8.2.0
 
@@ -85,7 +85,7 @@ INSERT INTO `img` (`imgid`, `address_link`, `name`, `lid`) VALUES
 (4, 'https://cf.shopee.vn/file/6643ffbaec4622e2c5809ffa23ce9c1b', 'Túi rác dọn phân chó mèo, Túi rác mini hốt phân thú cưng - Kat Planet', 2),
 (5, 'https://cf.shopee.vn/file/93aad8a9a679b20bd8c3b93ee5384653', 'Khay vệ sinh cho mèo hình tròn, Nhà vệ sinh chống văng cho mèo - Kat Planet Petshop', 2),
 (6, 'https://cf.shopee.vn/file/sg-11134201-22110-4j5hnfzoy3jvfb', 'Bộ chổi dọn cát vệ sinh, hạt rơi vãi cho chó mèo tiện lợi, Dụng cụ quét dọn đa năng cho thú cưng - Kat Planet Petshop', 2),
-(7, 'https://cf.shopee.vn/file/cb7c4495e630a8415ba4190b3bd4cef0', 'Cát đậu nành cho mèo MIMI 6L, Cát vệ sinh hữu cơ chiết xuất từ mầm đậu nành nguyên cám', 1);
+(7, 'https://cf.shopee.vn/file/551864382ed7f0ef12f67b69055c2c50', 'Thảm hứng cát mèo, Thảm lót chống văng cát, hứng cát vệ sinh cho mèo', 2);
 
 -- --------------------------------------------------------
 
@@ -114,7 +114,7 @@ INSERT INTO `listproduct` (`lid`, `name`) VALUES
 
 CREATE TABLE `product` (
   `pid` int(11) NOT NULL,
-  `name` varchar(500) NOT NULL,
+  `name` varchar(100) NOT NULL,
   `price` float NOT NULL,
   `count` int(11) NOT NULL,
   `imgid` int(11) DEFAULT 1,
@@ -126,13 +126,14 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`pid`, `name`, `price`, `count`, `imgid`, `lid`) VALUES
-(12, '[Mẫu mới] Cát đậu nành CATURE cho mèo mùi sữa, Cát vệ sinh cho mèo CATURE TOFU 7L', 190000, 0, 1, 1),
-(13, 'Cát đậu nành cho mèo MIMI 6L, Cát vệ sinh hữu cơ chiết xuất từ mầm đậu nành nguyên cám', 125000, 4, 2, 1),
-(14, '[100 Miếng] Tã lót chuồng vệ sinh cho chó mèo DONO siêu thấm hút - Miếng lót vệ sinh khoá nước cấp tốc', 180000, 14, 3, 2),
-(15, 'Túi rác dọn phân chó mèo, Túi rác mini hốt phân thú cưng - Kat Planet', 7000, 11, 4, 2),
-(16, 'Khay vệ sinh cho mèo hình tròn, Nhà vệ sinh chống văng cho mèo - Kat Planet Petshop', 145000, 5, 5, 2),
-(18, 'Bộ chổi dọn cát vệ sinh, hạt rơi vãi cho chó mèo tiện lợi - Kat Planet Petshop', 25000, 19, 6, 2),
-(19, 'Cát đậu nành cho mèo MIMI 6L, Cát vệ sinh hữu cơ chiết xuất từ mầm đậu nành nguyên cám', 130000, 20, 7, 1);
+(12, 'Cát đậu nành CATURE cho mèo mùi sữa, Cát vệ sinh cho mèo CATURE TOFU 7L', 190000, 0, 1, 1),
+(13, 'Cát vệ sinh hữu cơ chiết xuất từ mầm đậu nành nguyên cám', 125000, 4, 2, 1),
+(14, '[100 Miếng] Tã lót chuồng vệ sinh cho chó mèo DONO siêu thấm hút', 180000, 14, 3, 2),
+(15, 'Túi rác dọn phân chó mèo, Túi rác mini hốt phân thú cưng', 7000, 11, 4, 2),
+(16, 'Khay vệ sinh cho mèo hình tròn, Nhà vệ sinh chống văng cho mèo', 145000, 5, 5, 2),
+(18, 'Bộ chổi dọn cát vệ sinh, hạt rơi vãi cho chó mèo tiện lợi', 25000, 19, 6, 2),
+(20, 'Thảm hứng cát mèo, Thảm lót chống văng cát, hứng cát vệ sinh cho mèo', 155000, 20, 7, 2),
+(21, '[Mẫu mới] Nhà vệ sinh có nắp cho mèo cỡ lớn', 280000, 10, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -289,7 +290,7 @@ ALTER TABLE `listproduct`
 -- AUTO_INCREMENT cho bảng `product`
 --
 ALTER TABLE `product`
-  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT cho bảng `purchase_history`
