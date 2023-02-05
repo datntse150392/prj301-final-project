@@ -75,7 +75,7 @@
                                                         <form action="updateproduct" method="get">
                                                             <input type="hidden" name="pid_update" value="${product.pid}">
                                                             <button type="submit">
-                                                                <i class="fa-solid fa-pen"></i>
+                                                                ✓
                                                             </button>
                                                         </form>
                                                     </td>
@@ -84,7 +84,7 @@
                                                         <form action="update_productcount" method="get">
                                                             <input type="hidden" name="pid_update" value="${product.pid}">
                                                             <button type="submit">
-                                                                <i class="fa-solid fa-pen"></i>
+                                                                ✓
                                                             </button>
                                                         </form>
                                                     </td>
@@ -93,7 +93,7 @@
                                                         <form action="delete" method="post">
                                                             <input type="hidden" name="pid_delete" value="${product.pid}">
                                                             <button type="submit">
-                                                                <i class="fa-solid fa-trash"></i>
+                                                               ✗
                                                             </button>
                                                         </form>                                            
                                                     </td>

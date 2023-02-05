@@ -26,10 +26,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Giỏ hàng</title>
     </head>
-<body  class="hero"style="background-image: url('header_layout/images/images_header/hero_5.jpg'); height: auto">
+    <body  class="hero"style="background-image: url('header_layout/images/images_header/hero_5.jpg'); height: auto">
         <section class="hero">
             <%@include file="header1.jsp"%>
-            <div class="container h-100 py-5">
+            <h4 style="color: white; text-align: center">${msg_purchase}</h4>
+            <div class="container h-100 py-5" style="margin-top: -10%">
                 <div class="row d-flex justify-content-center align-items-center h-100">
                     <div class="col-10">
 

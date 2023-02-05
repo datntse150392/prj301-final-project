@@ -13,12 +13,12 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/account_setting.css">
+    <link rel="stylesheet" type="text/css" href="account_setting_layout/css/style.css">
 </head>
 <body  class="hero"style="background-image: url('header_layout/images/images_header/hero_5.jpg'); height: 100%">
-    <%@include file="header1.jsp"%>
     <section class="py-5 my-5">
         <div class="container">
+            <small class="mb-5"><a href="homepage" style="color: white">Trang chủ</a></small>
             <h1 class="mb-5" style="color: white">Thông tin tài khoản</h1>
             <div class="bg-white shadow rounded-lg d-block d-sm-flex">
                 <div class="profile-tab-nav border-right">

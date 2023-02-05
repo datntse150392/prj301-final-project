@@ -16,7 +16,6 @@
     <body>
         <div class="hero" style="background-image: url('header_layout/images/images_header/hero_6.jpg'); height: 100%">
             <%@include file="header1.jsp"%>
-            <h4 style="color: red; text-align: center">${msg_purchase}</h4>
             <div style="text-align: center; padding-top: 15%">
                 <p class="lead fw-normal" style="color:white; font-size: 1.5rem">Cung cấp các sản phẩm cát vệ sinh, đồ ăn, phụ kiện, chăm sóc cho Boss.</p>
                 <a class="btn btn-outline-secondary" style="color:white; border-color:white" href="https://shopee.vn/kat_planet_petshop">Tham khảo thêm tại đây</a>

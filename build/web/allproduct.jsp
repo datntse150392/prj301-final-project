@@ -22,7 +22,7 @@
                 <%@include file="Sidebar.jsp"%>
                 <div style="text-align: -webkit-center; width: 100%" >
                     <!-- Thong bao san pham vua them -->
-                    <h4 style="color: red; text-align: center">${msg} </h4>
+                    <h4  class="alert-heading" style="color: red; text-align: center">${msg} </h4>
                     <div class="table-responsive">
                         <table class="table table-striped table-sm">
                         <thead style="font-size: 16px">
@@ -79,7 +79,7 @@
                                                         <form action="updateproduct" method="get">
                                                             <input type="hidden" name="pid_update" value="${product.pid}">
                                                             <button type="submit">
-                                                                <i class="fa-solid fa-pen"></i>
+                                                                ✓
                                                             </button>
                                                         </form>
                                                     </td>
@@ -88,7 +88,7 @@
                                                         <form action="update_productcount" method="get">
                                                             <input type="hidden" name="pid_update" value="${product.pid}">
                                                             <button type="submit">
-                                                                <i class="fa-solid fa-pen"></i>
+                                                                ✓
                                                             </button>
                                                         </form>
                                                     </td>
@@ -97,7 +97,7 @@
                                                         <form action="delete" method="post">
                                                             <input type="hidden" name="pid_delete" value="${product.pid}">
                                                             <button type="submit">
-                                                                <i class="fa-solid fa-trash"></i>
+                                                                ✗
                                                             </button>
                                                         </form>                                            
                                                     </td>

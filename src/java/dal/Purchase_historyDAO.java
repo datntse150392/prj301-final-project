@@ -41,7 +41,7 @@ public class Purchase_historyDAO extends DBContext {
     // Get list puchase by userid
     public ArrayList<Purchase_history> getAllPurchase_historybyUserID(int userid) {
         try {
-            String sql = "SELECT * FROM purchase_history where userid = ? ORDER BY purchase_history_id DESC";
+            String sql = "SELECT * FROM purchase_history where userid = ? ORDER BY purchase_history_id DESC LIMIT 2";
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setInt(1, userid);
             ArrayList<Purchase_history> list = new ArrayList<>();

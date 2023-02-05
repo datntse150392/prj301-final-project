@@ -77,6 +77,20 @@ public class cart extends HttpServlet {
         int pid = Integer.parseInt(request.getParameter("pid"));
         Purchase_history purchase_history = new Purchase_history(name, count, price, address_link, userid, pid);
 
+        // Check so luong ma khach hang them vao
+        int type_page = Integer.parseInt(request.getParameter("type_page"));
+        if (count <= 0) {
+            request.setAttribute("msg", "Số lượng không được nhỏ hơn 0, mời bạn thêm lại số lượng");
+            if (type_page == 1) {
+                request.getRequestDispatcher("allproduct").forward(request, response);
+            } else if (type_page == 2) {
+                request.getRequestDispatcher("list_product1").forward(request, response);
+
+            } else if (type_page == 3) {
+                request.getRequestDispatcher("list_product2").forward(request, response);
+            }
+        }
+
         if (session.getAttribute("list_purchase_history") != null) {
             list_purchase_history = (ArrayList<Purchase_history>) session.getAttribute("list_purchase_history");
 
@@ -102,17 +116,14 @@ public class cart extends HttpServlet {
 
         session.setAttribute("list_purchase_history", list_purchase_history);
         request.setAttribute("msg", "Bạn vừa thêm sản phẩm thành công!");
-        int type_page = Integer.parseInt(request.getParameter("type_page"));
-        if(type_page == 1) {
+        if (type_page == 1) {
             request.getRequestDispatcher("allproduct").forward(request, response);
-        }
-        else if (type_page == 2) {
+        } else if (type_page == 2) {
             request.getRequestDispatcher("list_product1").forward(request, response);
-            
+
+        } else if (type_page == 3) {
+            request.getRequestDispatcher("list_product2").forward(request, response);
         }
-        else if (type_page == 3) {
-             request.getRequestDispatcher("list_product2").forward(request, response);
-        }        
     }
 
     /**
@@ -158,11 +169,11 @@ public class cart extends HttpServlet {
                 }
             }
             session.removeAttribute("list_purchase_history");
-            request.setAttribute("msg_purchase", "Bạn vừa thanh toán xong đơn hàng!");
+            request.setAttribute("msg_purchase", "Bạn vừa thanh toán xong đơn hàng");
         } else {
             request.setAttribute("msg_purchase", "Đơn hàng có sản phẩm vượt quá số lượng hiện tại, mời bạn kiểm tra lại!");
         }
-        request.getRequestDispatcher("homepage.jsp").forward(request, response);
+        request.getRequestDispatcher("cart.jsp").forward(request, response);
 
     }
 
