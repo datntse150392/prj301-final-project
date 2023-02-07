@@ -13,15 +13,15 @@
 
         <link href="https://fonts.googleapis.com/css?family=Quicksand:400,600,700&amp;display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="header_layout/fonts/fonts_header/icomoon/style.css">
+        <link rel="stylesheet" href="Layout/header_layout/fonts/fonts_header/icomoon/style.css">
 
-        <link rel="stylesheet" href="header_layout/css/header/owl.carousel.min.css">
+        <link rel="stylesheet" href="Layout/header_layout/css/header/owl.carousel.min.css">
 
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="header_layout/css/header/bootstrap.min.css">
+        <link rel="stylesheet" href="Layout/header_layout/css/header/bootstrap.min.css">
 
         <!-- Style -->
-        <link rel="stylesheet" href="header_layout/css/header/style.css">
+        <link rel="stylesheet" href="Layout/header_layout/css/header/style.css">
 
         <title>JSP Page</title>
 
@@ -176,11 +176,11 @@
         </c:if>
 
         <!-- END header -->
-        <script src="header_layout/js/js_header/jquery-3.3.1.min.js"></script>
-        <script src="header_layout/js/js_header/popper.min.js"></script>
-        <script src="header_layout/js/js_header/bootstrap.min.js"></script>
-        <script src="header_layout/js/js_header/jquery.sticky.js"></script>
-        <script src="header_layout/js/js_header/main.js"></script>
+        <script src="Layout/header_layout/js/js_header/jquery-3.3.1.min.js"></script>
+        <script src="Layout/header_layout/js/js_header/popper.min.js"></script>
+        <script src="Layout/header_layout/js/js_header/bootstrap.min.js"></script>
+        <script src="Layout/header_layout/js/js_header/jquery.sticky.js"></script>
+        <script src="Layout/header_layout/js/js_header/main.js"></script>
 
     </body>
 </html>

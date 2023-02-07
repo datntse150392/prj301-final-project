@@ -10,37 +10,37 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Link CSS Login layout -->
+        <link rel="stylesheet" href="Layout/login_layout/layout.css">
         <title>Đăng nhập</title>
     </head>
-    <body  class="hero"style="background-image: url('header_layout/images/images_header/hero_5.jpg'); height: auto">
-        <%@include file="header1.jsp"%>
-        <div class="container col-xl-10 col-xxl-8 px-4 py-5">
-            <div class="row align-items-center g-lg-5 py-5">
-                <div class="col-md-10 mx-auto col-lg-5">
-                    <form action="login" method="post" class="p-4 p-md-5 border rounded-3 bg-light">
-                        <h1 class="display-4 fw-bold lh-1 mb-3" style="text-align: center;">Kat Planet</h1>
-                        <div class="form-floating mb-3">
-                            <input class="form-control" type="text" name="username" value="${username}" required></input>
-                            <label for="floatingInput">Tên đăng nhập</label>
+    <body>
+        <section>
+            <div class="form-box">
+                <div class="form-value">
+                    <form action="login" method="post">
+                        <h2>Đăng nhập</h2>
+                        <div class="inputbox">
+                            <input type="text" name="username" value="${username}" required>
+                            <label for="">Tên đăng nhập</label>
                         </div>
-                        <div class="form-floating mb-3">
-                            <input class="form-control" type="password" name="password" value="${password}" required ></input>
-                            <label for="floatingPassword">Mật khẩu</label>
+                        <div class="inputbox">
+                            <input type="password" name="password" value="${password}" required >
+                            <label for="">Mật khẩu</label>
                         </div>
-                        <div class="checkbox mb-3">
-                            <label>
-                                <input type="checkbox" value="remember-me"> Ghi nhớ mật khẩu
-                            </label>
+                        <div class="forget">
+                            <label for=""><input type="checkbox" required>Ghi nhớ mật khẩu</label>                 
                         </div>
-                        <button class="w-100 btn btn-lg btn-primary" type="submit">Đăng nhập</button>
-                        <p style="color:red">${msg}</p>
-                        <hr class="my-4">
-                        <a href="register">
-                            <small class="text-muted">Đăng kí tài khoản</small>
-                        </a>
+                        <button type="submit">Đăng nhập</button>
+                        <div class="register">
+                            <p>Không có tài khoản <a href="register">đăng kí ngay</a></p>
+                        </div>
+                        <h3 style="color: red">${msg}</h3>
                     </form>
                 </div>
             </div>
-        </div>
+        </section>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>
 </html>

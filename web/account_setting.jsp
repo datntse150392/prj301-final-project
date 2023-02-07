@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="account_setting_layout/css/style.css">
 </head>
-<body  class="hero"style="background-image: url('header_layout/images/images_header/hero_5.jpg'); height: 100%">
+<body  class="hero" style="background-image: url('Layout/header_layout/images/images_header/hero_6.jpg'); height: 100%">
     <section class="py-5 my-5">
         <div class="container">
             <small class="mb-5"><a href="homepage" style="color: white">Trang chủ</a></small>

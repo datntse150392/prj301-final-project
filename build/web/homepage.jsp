@@ -14,7 +14,7 @@
         <title>Trang chủ</title>
     </head>
     <body>
-        <div class="hero" style="background-image: url('header_layout/images/images_header/hero_6.jpg'); height: 100%">
+        <div class="hero" style="background-image: url('Layout/header_layout/images/images_header/hero_6.jpg'); height: 100%">
             <%@include file="header1.jsp"%>
             <div style="text-align: center; padding-top: 15%">
                 <p class="lead fw-normal" style="color:white; font-size: 1.5rem">Cung cấp các sản phẩm cát vệ sinh, đồ ăn, phụ kiện, chăm sóc cho Boss.</p>
