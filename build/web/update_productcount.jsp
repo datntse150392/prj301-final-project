@@ -12,11 +12,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Thêm/giảm số lượng</title>
     </head>
-    <body  class="hero"style="background-image: url('header_layout/images/images_header/hero_5.jpg'); height: auto; padding-bottom: 10%">
+    <body  class="hero"style="background-image: url('Layout/header_layout/images/images_header/hero_6.jpg'); height: auto; padding-bottom: 10%; background-size: unset">
         <%@include file="header1.jsp"%>
         <div class="container col-xl-10 col-xxl-8 px-4 py-5" style="width: 100%">
-            <h2 style="text-align: center; color: white; margin-bottom: -30px;margin-top: -40px;">Cập nhật Số Lượng</h2>
             <div class="row align-items-center g-lg-5 py-5">
+                <h1 style="text-align: center; color: white; margin-bottom: -30px;margin-top: -40px;">Cập nhật Số Lượng</h1>
                 <div class="col-md-10 mx-auto col-lg-5">
                     <form action="update_productcount" method="post" class="p-4 p-md-5 border rounded-3 bg-light">
                         <input type="hidden" name="update_pid" value="${product.pid}" >   

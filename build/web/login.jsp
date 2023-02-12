@@ -3,16 +3,15 @@
     Created on : Jan 7, 2023, 1:02:28 AM
     Author     : nguyenthanhdat
 --%>
-<script src="https://kit.fontawesome.com/e8ce65bac5.js" crossorigin="anonymous"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
-    <head>
+   <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Đăng nhập</title>
         <!-- Link CSS Login layout -->
         <link rel="stylesheet" href="Layout/login_layout/layout.css">
-        <title>Đăng nhập</title>
     </head>
     <body>
         <section>
@@ -20,6 +19,7 @@
                 <div class="form-value">
                     <form action="login" method="post">
                         <h2>Đăng nhập</h2>
+                        <h3 style="color: red">${msg}</h3>
                         <div class="inputbox">
                             <input type="text" name="username" value="${username}" required>
                             <label for="">Tên đăng nhập</label>
@@ -35,7 +35,9 @@
                         <div class="register">
                             <p>Không có tài khoản <a href="register">đăng kí ngay</a></p>
                         </div>
-                        <h3 style="color: red">${msg}</h3>
+                        <div class="homepage">
+                            <a href="homepage">Trang chủ</a>
+                        </div>
                     </form>
                 </div>
             </div>

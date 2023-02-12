@@ -15,19 +15,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="account_setting_layout/css/style.css">
 </head>
-<body  class="hero" style="background-image: url('Layout/header_layout/images/images_header/hero_6.jpg'); height: 100%">
+<body  class="hero"style="background-image: url('Layout/header_layout/images/images_header/hero_6.jpg'); height: auto; background-size: unset">
+    <%@include file="header1.jsp"%>
     <section class="py-5 my-5">
         <div class="container">
-            <small class="mb-5"><a href="homepage" style="color: white">Trang chủ</a></small>
             <h1 class="mb-5" style="color: white">Thông tin tài khoản</h1>
             <div class="bg-white shadow rounded-lg d-block d-sm-flex">
                 <div class="profile-tab-nav border-right">
                     <div class="p-4">
-                        <!-- Link chèn hình ảnh cá nhân nếu sau này có sử dụng
+                        <!-- Link chèn hình ảnh cá nhân nếu sau này có sử dụng -->
                         <div class="img-circle text-center mb-3">
-                                <img src="img/user2.jpg" alt="Image" class="shadow">
+                            <img src="img/user2.jpg" alt="Image" class="shadow">
                         </div>
-                        -->
                         <h4 class="text-center">${admin.displayname}</h4>
                         <h4 class="text-center">${user_account.displayname}</h4>
                     </div>
@@ -52,7 +51,7 @@
                 </div>
                 <div class="tab-content p-4 p-md-5" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="account" role="tabpanel" aria-labelledby="account-tab">
-                        <h3 class="mb-4">Thông tin cá nhân</h3>
+                        <h2 class="mb-4">Thông tin cá nhân</h2>
                         <!-- Check thong tin admin -->
                         <c:if test="${admin_account != null}">
                             <div class="row">
@@ -67,7 +66,19 @@
                                         <label>Địa chỉ</label>
                                         <input type="text" class="form-control" value="${admin_account.address}">
                                     </div>
-                                </div>                        
+                                </div>   
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Số điện thoại</label>
+                                        <input type="text" class="form-control" value="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Gmail</label>
+                                        <input type="text" class="form-control" value="">
+                                    </div>
+                                </div>
                             </div>
                         </c:if>
                         <!-- Check thong tin user -->
@@ -225,5 +236,11 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- END header -->
+    <script src="Layout/header_layout/js/js_header/jquery-3.3.1.min.js"></script>
+    <script src="Layout/header_layout/js/js_header/popper.min.js"></script>
+    <script src="Layout/header_layout/js/js_header/bootstrap.min.js"></script>
+    <script src="Layout/header_layout/js/js_header/jquery.sticky.js"></script>
+    <script src="Layout/header_layout/js/js_header/main.js"></script>
 </body>
 </html>

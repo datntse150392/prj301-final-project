@@ -76,12 +76,16 @@ public class delete_cart extends HttpServlet {
         HttpSession session = request.getSession();
         ArrayList<Purchase_history> list_purchase_history = (ArrayList<Purchase_history>) session.getAttribute("list_purchase_history");
         int cart_pid = Integer.parseInt(request.getParameter("cart_pid"));
+        float total_price = (float) (session.getAttribute("total_price"));
+        
         
         for(int i=0; i < list_purchase_history.size(); i++) {
             if(list_purchase_history.get(i).getPid() == cart_pid){
+                total_price = total_price - list_purchase_history.get(i).getPrice();
                 list_purchase_history.remove(i);
             }
         }
+        session.setAttribute("total_price", total_price);
         session.setAttribute("list_purchase_history", list_purchase_history);
         request.getRequestDispatcher("cart.jsp").forward(request, response);     
     }

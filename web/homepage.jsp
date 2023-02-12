@@ -11,14 +11,24 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- CSS !-->
+        <link rel="stylesheet" href="Layout/homepage_layout/style.css"/>
         <title>Trang chủ</title>
     </head>
     <body>
         <div class="hero" style="background-image: url('Layout/header_layout/images/images_header/hero_6.jpg'); height: 100%">
             <%@include file="header1.jsp"%>
-            <div style="text-align: center; padding-top: 15%">
-                <p class="lead fw-normal" style="color:white; font-size: 1.5rem">Cung cấp các sản phẩm cát vệ sinh, đồ ăn, phụ kiện, chăm sóc cho Boss.</p>
-                <a class="btn btn-outline-secondary" style="color:white; border-color:white" href="https://shopee.vn/kat_planet_petshop">Tham khảo thêm tại đây</a>
+            <div class="content">
+                <h1>Đồng hành cùng BOSS không lo về GIÁ</h1>
+                <p style="margin: 20px auto;font-weight: 100;line-height: 25px; color:#fff">Cung cấp các sản phẩm cát vệ sinh, đồ ăn, phụ kiện, chăm sóc cho Boss.</p>
+                <div>
+                    <button style="border-radius: 25px;margin: 20px 10px;" type="button"><span></span>
+                        <a  style="margin: 20px auto;font-weight: 100;line-height: 25px; color:#fff" href="https://shopee.vn/kat_planet_petshop">Xem thêm</a>
+                    </button>
+                    <button style="border-radius: 25px;margin: 20px 10px;" type="button"><span></span>
+                        <a  style="margin: 20px auto;font-weight: 100;line-height: 25px; color:#fff" href="allproduct">Mua ngay tại đây</a>
+                    </button>
+                </div>          
             </div>
         </div>
     </div>

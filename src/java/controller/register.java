@@ -60,6 +60,7 @@ public class register extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
         // Get all address sau do day ve trang register.jsp
         ArrayList<Address> list_address = new ArrayList<>();
         AddressDAO aDAO = new AddressDAO();
@@ -83,7 +84,7 @@ public class register extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String re_password = request.getParameter("re_password");
-        String displayname = request.getParameter("displayname");
+        String displayname = (String)request.getParameter("displayname");
         int address_id = Integer.parseInt(request.getParameter("address_id"));
 
         ArrayList<User_Account> list_user_account = new ArrayList<>();

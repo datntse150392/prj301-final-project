@@ -49,6 +49,12 @@ public class Cart extends HttpServlet {
         int pid = Integer.parseInt(request.getParameter("pid"));
         Purchase_history purchase_history = new Purchase_history(name, count, price, address_link, userid, pid);
 
+        // Khai báo biến total_price cho phần tính tổng đơn hàng, nếu có sẽ set total_price thông qua session đã lưu vào
+        // Còn nếu chưa có đơn hàng nào thì tự động khai báo = 0 và tiếp tục thực hiện chức năng + total_price
+        float total_price = 0;
+        if(session.getAttribute("total_price") != null) {
+            total_price = (float) session.getAttribute("total_price");
+        }
         // Check so luong ma khach hang them vao
         int type_page = Integer.parseInt(request.getParameter("type_page"));
         if (count <= 0) {
@@ -73,6 +79,7 @@ public class Cart extends HttpServlet {
                 if (list_purchase_history.get(i).getPid() == pid) {
                     int new_count = list_purchase_history.get(i).getCount() + count;
                     list_purchase_history.get(i).setCount(new_count);
+                    total_price = total_price + list_purchase_history.get(i).getPrice();
                     flag = true;
                     break;
                 }
@@ -81,13 +88,17 @@ public class Cart extends HttpServlet {
             // thi chi can add them san pham can mua vao gio hang
             if (flag == false) {
                 list_purchase_history.add(purchase_history);
+                total_price = total_price + purchase_history.getPrice();
             }
         } else {
             list_purchase_history.add(purchase_history);
+            total_price = total_price + purchase_history.getPrice();
         }
 
         session.setAttribute("list_purchase_history", list_purchase_history);
         request.setAttribute("msg", "Bạn vừa thêm sản phẩm thành công!");
+        session.setAttribute("total_price", total_price);
+        
         if (type_page == 1) {
             request.getRequestDispatcher("allproduct").forward(request, response);
         } else if (type_page == 2) {
@@ -156,10 +167,12 @@ public class Cart extends HttpServlet {
                 }
             }
             session.removeAttribute("list_purchase_history");
+            session.removeAttribute("total_price");
             request.setAttribute("msg_purchase", "Bạn vừa thanh toán xong đơn hàng");
         } else {
             request.setAttribute("msg_purchase", "Đơn hàng có sản phẩm vượt quá số lượng hiện tại, mời bạn kiểm tra lại!");
         }
+
         request.getRequestDispatcher("cart.jsp").forward(request, response);
 
     }

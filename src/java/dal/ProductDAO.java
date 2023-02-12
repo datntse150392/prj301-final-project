@@ -19,10 +19,10 @@ import model.Product;
  */
 public class ProductDAO extends DBContext {
 
-    // Get all List of Product
+    // Khắc phục lại cart
     public ArrayList<Product> getListOfProduct() {
         try {
-            String sql = "SELECT * FROM product limit 5";
+            String sql = "SELECT * FROM product";
             PreparedStatement ps = connection.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
 
@@ -44,13 +44,94 @@ public class ProductDAO extends DBContext {
         }
         return null;
     }
-    
-    // Get all List of Product
-    public ArrayList<Product> getListOfProductbyLoadMore(int number_loadmore) {
+
+    // get number total product
+    public int get_number_total_product() {
         try {
-            String sql = "SELECT * FROM product limit ?";
+            String sql = "SELECT * FROM product";
             PreparedStatement ps = connection.prepareStatement(sql);
-            ps.setInt(1, number_loadmore);
+            ResultSet rs = ps.executeQuery();
+
+            ArrayList<Product> list = new ArrayList<>();
+            int count = 0;
+            while (rs.next()) {
+                Product p = new Product();
+                p.setPid(rs.getInt("pid"));
+                p.setPname(rs.getString("name"));
+                p.setPrice(rs.getFloat("price"));
+                p.setCount(rs.getInt("count"));
+                p.setImgid(rs.getInt("imgid"));
+                p.setLid(rs.getInt("lid"));
+
+                list.add(p);
+            }
+            return count = list.size();
+        } catch (SQLException ex) {
+            Logger.getLogger(ListProductDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return 0;
+    }
+
+    // Lấy sản phẩm có giá giảm dần
+    public ArrayList<Product> getProduct_by_cost_down(int index) {
+        try {
+            String sql = "SELECT * FROM product ORDER BY product.price DESC limit 6 offset ?";
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setInt(1, (index - 1) * 6);
+            ResultSet rs = ps.executeQuery();
+
+            ArrayList<Product> list = new ArrayList<>();
+            while (rs.next()) {
+                Product p = new Product();
+                p.setPid(rs.getInt("pid"));
+                p.setPname(rs.getString("name"));
+                p.setPrice(rs.getFloat("price"));
+                p.setCount(rs.getInt("count"));
+                p.setImgid(rs.getInt("imgid"));
+                p.setLid(rs.getInt("lid"));
+
+                list.add(p);
+            }
+            return list;
+        } catch (SQLException ex) {
+            Logger.getLogger(ListProductDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+
+    // Lấy sản phẩm có giá tăng dần
+    public ArrayList<Product> getProduct_by_cost_up(int index) {
+        try {
+            String sql = "SELECT * FROM `product` ORDER BY product.price ASC limit 6 offset ?";
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setInt(1, (index - 1) * 6);
+            ResultSet rs = ps.executeQuery();
+
+            ArrayList<Product> list = new ArrayList<>();
+            while (rs.next()) {
+                Product p = new Product();
+                p.setPid(rs.getInt("pid"));
+                p.setPname(rs.getString("name"));
+                p.setPrice(rs.getFloat("price"));
+                p.setCount(rs.getInt("count"));
+                p.setImgid(rs.getInt("imgid"));
+                p.setLid(rs.getInt("lid"));
+
+                list.add(p);
+            }
+            return list;
+        } catch (SQLException ex) {
+            Logger.getLogger(ListProductDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+
+    // Get all List of Product
+    public ArrayList<Product> getListOfProductbyIndex(int index) {
+        try {
+            String sql = "SELECT * FROM product limit 6 offset ?";
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setInt(1, (index - 1) * 6);
             ResultSet rs = ps.executeQuery();
 
             ArrayList<Product> list = new ArrayList<>();
@@ -172,6 +253,12 @@ public class ProductDAO extends DBContext {
             Logger.getLogger(ProductDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
 
+    }
+
+    public static void main(String[] args) {
+        ProductDAO p = new ProductDAO();
+        int count = p.get_number_total_product();
+        System.out.println(count);
     }
 
 }

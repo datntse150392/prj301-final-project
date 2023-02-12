@@ -13,11 +13,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Thêm sản phẩm</title>
     </head>
-    <body  class="hero"style="background-image: url('header_layout/images/images_header/hero_5.jpg'); height: auto">
+    <body  class="hero"style="background-image: url('Layout/header_layout/images/images_header/hero_6.jpg'); height: auto; background-size: unset">
         <%@include file="header1.jsp"%>
-        <div class="container col-xl-10 col-xxl-8 px-4 py-5" style="width: 100%">
-                           <h3 style="text-align: center; color: white; margin-bottom: -30px;margin-top: -40px;">Nhập thông tin để thêm sản phẩm</h3>
+        <div class="container col-xl-10 col-xxl-8 px-4 py-5" style="width: 100%">                          
             <div class="row align-items-center g-lg-5 py-5">
+                <h1 style="text-align: center; color: white; margin-bottom: -30px;margin-top: -40px;">Nhập thông tin để thêm sản phẩm</h1>
                 <div class="col-md-10 mx-auto col-lg-5">
                     <form action="addproduct" method="post" class="p-4 p-md-5 border rounded-3 bg-light">
                         <div class="form-floating mb-3">

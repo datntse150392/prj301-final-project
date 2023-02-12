@@ -125,3 +125,13 @@ button{
 .login p a:hover{
     text-decoration: underline;
 }
+
+.homepage {
+   text-align: center;
+}
+
+
+.homepage a {
+    text-decoration: none;
+    color: #fff;
+}
